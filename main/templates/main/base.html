@@ -22,12 +22,12 @@
       integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
       crossorigin="anonymous"
     ></script>
-    <title>MCAET</title>
+    <title>{% block title %} {% endblock title %}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">MCAET</a>
+        <a class="navbar-brand" href="{% url 'home' %}">MCAET</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -40,13 +40,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav text-center ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
+            
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -55,22 +53,33 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Courses
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="{% url 'ug' %}">Undergraduate</a></li>
+                <li><a class="dropdown-item" href="{% url 'pg' %}">Post Graduate</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li>
+                <!-- <li>
                   <a class="dropdown-item" href="#">Something else here</a>
-                </li>
+                </li> -->
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link" href="#">Faculty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">About</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <!-- <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
@@ -80,7 +89,7 @@
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
-          </form>
+          </form> -->
         </div>
       </div>
     </nav>
