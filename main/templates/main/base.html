@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +12,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'main/styles/styles.css' %}">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
@@ -25,7 +27,7 @@
     <title>{% block title %} {% endblock title %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light ">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">MCAET</a>
         <button
@@ -41,11 +43,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav text-center ms-auto">
-            <li class="nav-item">
+            <li class="nav-item px-4">
               <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             
-            <li class="nav-item dropdown">
+            <li class="nav-item px-4 dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -58,25 +60,42 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'ug' %}">Undergraduate</a></li>
                 <li><a class="dropdown-item" href="{% url 'pg' %}">Post Graduate</a></li>
-                <li><hr class="dropdown-divider" /></li>
+                
                 <!-- <li>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </li> -->
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Faculty</a>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="{% url 'faculty' %}">Faculty</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#">Gallery</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link " href="#">Contact</a>
+            <li class="nav-item px-4">
+              <a class="nav-link " href="{% url 'gallery' %}">Gallery</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link " href="#">About</a>
+            <li class="nav-item px-4">
+              <a class="nav-link " href="{% url 'contact' %}">Contact</a>
+            </li>
+
+            <li class="nav-item px-4 dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'about_clg' %}">College</a></li>
+                <li><a class="dropdown-item" href="{% url 'about_uni' %}">University</a></li>
+                <li><a class="dropdown-item" href="{% url 'about_dev' %}">Developer</a></li>
+                
+                <!-- <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li> -->
+              </ul>
             </li>
           </ul>
           <!-- <form class="d-flex" role="search">
