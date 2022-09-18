@@ -1,11 +1,49 @@
 {% extends "main/base.html" %}
 {% load static %}
 
-{% block title %}  MCAET | PG  {% endblock title %} 
+{% block title %}  MCAET | UG  {% endblock title %} 
 
 {% block content %}
 
-<section class="vh-100 flex-grow p-3 mb-5"  >
+<h2 class="text-uppercase text-center my-5 _heading" style="color:#4169E1">Our UnderGraduate Courses</h2>
+
+<div class="card-group">
+  
+  <div class="card px-3">
+    <img src="{% static 'main/img/cse.jpg'%}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card px-3">
+    <img src="{% static 'main/img/me.jpg'%}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card px-3">
+    <img src="{% static 'main/img/ag.jpg'%}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+<!-- <section class="vh-100 flex-grow p-3 mb-5"  >
     <div class="mask d-flex align-items  gradient-custom-3">
       <div class="container h-100" id="_contain">
         <div class="row d-flex justify-content-lg-between align-items h-100">
@@ -37,8 +75,4 @@
         </div>
       </div>
     </div>
-  </section>
-
-
-
-{% endblock content %}
+  </section> -->
